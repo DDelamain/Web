@@ -1,3 +1,12 @@
-﻿body
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+body
 {
+	/*font-family:'Segoe UI',Tahoma,Verdana, Geneva, Tahoma, sans-serif,Verdana;*/
+	font-family:Roboto Condensed, 'Cambria Math';
+	font-size: 22px;
+}
+p/*Селектор. Селектором может быть дескриптор,id, либо class*/
+{
+	/*Набор стилей:*/
+	text-align:justify;
 }
