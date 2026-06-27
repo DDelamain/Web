@@ -5,8 +5,19 @@ body
 	font-family:Roboto Condensed, 'Cambria Math';
 	font-size: 22px;
 }
+h1, h2, h3, h4
+{
+	text-align:center;
+}
 p/*Селектор. Селектором может быть дескриптор,id, либо class*/
 {
 	/*Набор стилей:*/
 	text-align:justify;
+	text-align:48px;
+}
+figure
+{
+	text-align:center;
+	font-style:italic;
+	font-weight:200;
 }
