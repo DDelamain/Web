@@ -197,13 +197,14 @@
 	grid-template-columns: repeat(6,auto);
 	/*grid-gap:8px;*/
 	grid-row-gap: 8px;
+	grid-column-gap: 5px;
 }
 
 .square 
 {
-	width: 30px;
-	height: 30px;
-	border: solid 1px;
+	width: 26px;
+	height: 26px;
+	border: inset 2px;
 }
 .calc-buttons button 
 {
@@ -216,9 +217,20 @@
 	grid-column-start: 2;
 	grid-column-end: 7;
 }
-	.clear-buttons >button
+	.clear-buttons > button
 	{
-		width: 79px;
+		width: 78px;
 		margin-right:1px;
 	}
+.memory-button
+{
+	margin-right:0px 7px 0px -2px;
+}
+.calc-buttons > button
+{
+	color:blue;
+}
+.calc-buttons > .memory-button, .calc-buttons > .operation-button, .clear-buttons > button {
+	color: red;
+}
 
