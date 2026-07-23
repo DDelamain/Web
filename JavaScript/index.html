@@ -60,6 +60,32 @@
 		<button onclick="Factorial()">Вычислить</button>
 	</div>
 
+	<div>
+		<h2>Возведение в степень</h2>
+		<label for="power-number">Число:</label>
+		<input id="power-number" type="number">
+		<label for="power-degree">Степень:</label>
+		<input id="power-degree" type="number">
+		<button onclick="Power()">Вычислить</button>
+		<div id="power-result"></div>
+	</div>
+
+	<div>
+		<h2>Ряд Фибоначчи</h2>
+		<label for="fib-count">Количество чисел:</label>
+		<input id="fib-count" type="number">
+		<button onclick="Fibonacci()">Вывести</button>
+		<div id="fib-result"></div>
+	</div>
+
+	<div>
+		<h2>Ряд Фибоначчи до указанного предела</h2>
+		<label for="fib-limit">Предел:</label>
+		<input id="fib-limit" type="number">
+		<button onclick="FibonacciLimit()">Вывести</button>
+		<div id="fib-limit-result"></div>
+	</div>
+
 	<script>
 
 		function Factorial() {
@@ -73,6 +99,57 @@
 				document.getElementById("factorial-result").innerHTML += `${i}! = ${f};<br>`;
 			}
 			document.getElementById("factorial-result").innerHTML += `<h3>${n}! = ${f};</h3>`;
+		}
+
+		function Power() {
+
+			let number = Number(document.getElementById("power-number").value);
+			let degree = Number(document.getElementById("power-degree").value);
+
+			let result = number ** degree;
+
+			document.getElementById("power-result").innerHTML = `<h3>${number}<sup>${degree}</sup> = ${result}</h3>`;
+		}
+
+		function Fibonacci() {
+
+			let count = Number(document.getElementById("fib-count").value);
+
+			let a = 0;
+			let b = 1;
+
+			let text = "";
+
+			for (let i = 1; i <= count; i++) {
+
+				text += a + " ";
+
+				let c = a + b;
+				a = b;
+				b = c;
+			}
+
+			document.getElementById("fib-result").innerHTML = `<h3>${text}</h3>`;
+		}
+		function FibonacciLimit() {
+
+			let limit = Number(document.getElementById("fib-limit").value);
+
+			let a = 0;
+			let b = 1;
+
+			let text = "";
+
+			while (a <= limit) {
+
+				text += a + " ";
+
+				let c = a + b;
+				a = b;
+				b = c;
+			}
+
+			document.getElementById("fib-limit-result").innerHTML = `<h3>${text}</h3>`;
 		}
 
 		//alert("Привет!\nЭто модальное окно браузера");
