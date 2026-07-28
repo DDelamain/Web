@@ -58,23 +58,22 @@ function addLeadingZero(number)
 }
 
 tick_timer();
-function tick_timer()
-{
-	let time = new Date();
+function tick_timer() {
+	let time = new Date();	
 	document.getElementById("full-time").innerHTML = time.toString();
 
-	document.getElementById("hours").innerHTML		=addLeadingZero( time.getHours()	);
-	document.getElementById("minutes").innerHTML	=addLeadingZero( time.getMinutes()	);
-	document.getElementById("seconds").innerHTML	=addLeadingZero( time.getSeconds()	);
-													 
-	document.getElementById("years").innerHTML		=addLeadingZero( time.getFullYear()	);
-	document.getElementById("months").innerHTML		=addLeadingZero( time.getMonth() + 1);
-	document.getElementById("days").innerHTML		= addLeadingZero( time.getDate());
+	document.getElementById("hours").innerHTML = addLeadingZero(time.getHours());
+	document.getElementById("minutes").innerHTML = addLeadingZero(time.getMinutes());
+	document.getElementById("seconds").innerHTML = addLeadingZero(time.getSeconds());
 
-	document.getElementById("day-of-week").innerHTML = time.toLocateDateString("ru", { weekday: 'long' });
+	document.getElementById("years").innerHTML = addLeadingZero(time.getFullYear());
+	document.getElementById("months").innerHTML = addLeadingZero(time.getMonth() + 1);
+	document.getElementById("days").innerHTML = addLeadingZero(time.getDate());
 
-	document.getElementById("current-date").style.viibility = document.getElementById("show-date").checked ? "visible" : "hiden";
-	document.getElementById("day-of-week").style.viibility = document.getElementById("show-date").checked ? "visible" : "hiden";
+	document.getElementById("day-of-week").innerHTML = time.toLocaleDateString("ru", { weekday: 'long' });
 
-	setTimeout(tick_timer, 100);
+	document.getElementById("current-date").style.visibility = document.getElementById("show-date").checked ? "visible" : "hidden";
+	document.getElementById("day-of-week").style.visibility = document.getElementById("show-weekday").checked ? "visible" : "hidden";
+
+	setTimeout(tick_timer, 100);	
 }
