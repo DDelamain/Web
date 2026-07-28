@@ -1,6 +1,6 @@
 ﻿@font-face {
 	font-family: Digital-7 Mono;
-	src: url('http://localhost:59856/digital-7 (mono).ttf')
+	src: url('digital-7 (mono).ttf');
 }
 body {
 	transition: background-color 3s, color 3s;
